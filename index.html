@@ -54,12 +54,13 @@
 <script>
     const labels = ['Polution & Waste', 'Landuse', 'Energy', 'Safety & Security', 'Social Connections', 'Cultural Identity', 'Subjective Wellbeing', 'Mātauranga Māori', 'Team Diversity', 'The overlap', 'Shop Local', 'Value Proposition', 'Emissions', 'Te Mauri o te Wai', 'Biodiversity'];
     const dataValues = [-1,-1,-1,-1,-1,0,0,0,0,0,0,0,0,0,0];
+    const colors = ["#F69790","#F5D685","#9DBA82","#6DA843"];
 
     function getColor(value) {
-        if (value >= -2 && value < -0.9) return '#DAD7CD';
-        if (value >= -0.9 && value < 0.1) return '#A3B18A';
-        if (value >= 0.1 && value < 1.1) return '#588157';
-        if (value >= 1.1 && value <= 2) return '#3A5A40';
+        if (value >= -2 && value < -0.9) return colors[0];
+        if (value >= -0.9 && value < 0.1) return colors[1];
+        if (value >= 0.1 && value < 1.1) return colors[2];
+        if (value >= 1.1 && value <= 2) return colors[3];
     }
 
     function updateColors() {
